@@ -65,9 +65,13 @@ Data-wise, augmentation approaches primarily rephrase questions to enhance diver
 MQR reformulates questions across multiple aspects to increase difficulty while maintaining the original gold answer. 
 The core instructions for these strategies are as follows:
 
-- **Background:** Add a story background that is not related to the core mathematical content of the given question, but seems to be related to the question. If the given question already has such a background, change it to a new, complexer background.
+<p align="center">
+  <img src="assests/MQR.jpg" width="70%">
+</p>
+
+<!-- - **Background:** Add a story background that is not related to the core mathematical content of the given question, but seems to be related to the question. If the given question already has such a background, change it to a new, complexer background.
 - **Term:** Invent a new, abstract mathematical term to define a concept that is central to the given question, and restate the entire question using this term.
-- **Sub-Problem:** Convert a key numerical condition of the given question which have a definite value into an independent sub-problem. The sub-problem may belong to any branch of mathematics (e.g., algebra, geometry, number theory, combinatorics).
+- **Sub-Problem:** Convert a key numerical condition of the given question which have a definite value into an independent sub-problem. The sub-problem may belong to any branch of mathematics (e.g., algebra, geometry, number theory, combinatorics). -->
 
 ### Main Results
 
