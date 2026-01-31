@@ -55,27 +55,7 @@ We propose a two-dual MathForge framework to improve mathematical reasoning by t
 Algorithmically, widely used Group Relative Policy Optimization (GRPO) suffers from an implicit imbalance where the magnitude of policy updates is lower for harder questions.
 DGPO first rectifies the implicit imbalance in GRPO via difficulty-balanced group advantage estimation (DGAE), and further prioritizes harder questions by difficulty-aware question-level weighting (DQW).
 
-Specifically, the optimization objective of DGPO is defined as follows:
-
-$$
-\mathcal{J}_\text{DGPO}(\theta)=\mathbb{E}\left[\left\{q_s\right\}^B_{s=1}\sim\mathcal{D},\left\{o_{si}\right\}^G_{i=1}\sim\pi_{\theta_\text{old}}(\cdot\mid q_s)\right]\\
-\frac{1}{\sum^{\textcolor{blue}{B_\text{v}}}_{s=1}\sum^G_{i=1}\left|o_{si}\right|}\sum^{\textcolor{blue}{B_\text{v}}}_{s=1}\textcolor{blue}{\lambda_s}\sum^G_{i=1}\sum^{\left|o_{si}\right|}_{t=1}\left\{\min\left[I_{sit}(\theta)\textcolor{blue}{\hat{A}_{\text{DG},si}},\operatorname{clip}\left(I_{sit}(\theta),1-\varepsilon,1+\varepsilon\right)\textcolor{blue}{\hat{A}_{\text{DG},si}}\right]\right\},
-$$
-
-where $I_{sit}(\theta)$ is the importance sampling ratio of the token $o_{si,t}$, and $\hat{A}_{\text{DG},si}$ is the advantage of the response $o_i$ obtained by DGAE, respectively given by:
-$$
-I_{sit}(\theta)=\frac{\pi_\theta\left(o_{si,t}\mid q_s,o_{si,<t}\right)}{\pi_{\theta_\text{old}}\left(o_{si,t}\mid q_s,o_{si,<t}\right)},~~\hat{A}_{\text{DG},si}=\frac{r_{si}-\operatorname{mean}\left(\left\{r_{si}\right\}^G_{i=1}\right)}{\operatorname{MAD}\left(\left\{r_{si}\right\}^G_{i=1}\right)},
-$$
-$$
-\text{where}~\operatorname{MAD}\left(\left\{r_{si}\right\}^G_{i=1}\right) = \frac{1}{G}\sum^G_{i=1}\left|r_{si}-\operatorname{mean}\left(\left\{r_{si}\right\}^G_{i=1}\right)\right|.
-$$
-Here, $\operatorname{MAD}(\cdot)$ denotes the **mean absolute deviation** function.
-Furthermore, $\lambda_s$ is the difficulty-aware weight for the query $q_s$ computed by DQW as follows:
-$$
-\lambda_s = B_\text{v}\cdot\frac{\exp\left(D_s/T\right)}{\sum^{B_\text{v}}_{s=1}\exp\left(D_s/T\right)},~~\text{where}~D_s=-\operatorname{mean}\left(\left\{r_{si}\right\}^G_{i=1}\right).
-$$
-Here, $B$ represents the global batch size, and $B_\text{v}$ signifies the number of valid queries in the batch.
-
+![DGPO](assests/dgpo.jpg)
 
 ### Multi-Aspect Question Reformulation (MQR)
 
