@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assests/logo.jpg" width="380px">
+</p>
+
 <h1 align="center" style="margin-top: 10px;">Harder Is Better: Boosting Mathematical Reasoning via Difficulty-Aware GRPO and Multi-Aspect Question Reformulation</h1>
 
 <p align="center">
