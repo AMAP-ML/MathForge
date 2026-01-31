@@ -55,7 +55,7 @@ We propose a two-dual MathForge framework to improve mathematical reasoning by t
 Algorithmically, widely used Group Relative Policy Optimization (GRPO) suffers from an implicit imbalance where the magnitude of policy updates is lower for harder questions.
 DGPO first rectifies the implicit imbalance in GRPO via difficulty-balanced group advantage estimation (DGAE), and further prioritizes harder questions by difficulty-aware question-level weighting (DQW).
 
-![DGPO](assests/dgpo.jpg)
+![](assests/DGPO.jpg)
 
 ### Multi-Aspect Question Reformulation (MQR)
 
