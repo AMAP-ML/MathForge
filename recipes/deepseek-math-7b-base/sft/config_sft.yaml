@@ -1,0 +1,47 @@
+# Config for 1 node of 8 x H100s (80GB)
+# Model arguments
+model_name_or_path: deepseek-ai/deepseek-math-7b-base
+model_revision: main
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+
+# Data training arguments
+chat_template: "{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}{{ bos_token }}{% for message in messages %}{% if message['role'] == 'user' %}{{ 'User: ' + message['content'] + '\n\n' }}{% elif message['role'] == 'assistant' %}{{ 'Assistant: ' + message['content'] + eos_token }}{% elif message['role'] == 'system' %}{{ message['content'] + '\n\n' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}"
+
+dataset_name: YanqiDai/MathForge_NuminaMath-CoT-sample80k
+dataset_config: default
+dataset_num_proc: 12
+
+# SFT trainer config
+bf16: true
+do_eval: false
+eval_strategy: 'no'
+gradient_accumulation_steps: 8
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: deepseek-math-7b-base_NuminaMath-CoT-sample80k_SFT
+hub_strategy: every_save
+learning_rate: 2.0e-06
+log_level: info
+logging_steps: 1
+logging_strategy: steps
+lr_scheduler_type: cosine
+packing: false
+max_grad_norm: 0.2
+max_length: 2048
+max_steps: -1
+num_train_epochs: 1
+output_dir: checkpoints/deepseek-math-7b-warm
+overwrite_output_dir: true
+per_device_eval_batch_size: 1
+per_device_train_batch_size: 32
+push_to_hub: false
+report_to:
+- swanlab
+save_strategy: no
+save_total_limit: 1
+save_only_model: true
+seed: 42
+use_liger_kernel: true
+warmup_ratio: 0.03
