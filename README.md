@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assests/logo.jpg" width="180px">
+  <img src="assets/logo.jpg" width="180px">
 </p>
 
 <h1 align="center" style="margin-top: 10px;">Harder Is Better: Boosting Mathematical Reasoning via Difficulty-Aware GRPO and Multi-Aspect Question Reformulation</h1>
@@ -59,7 +59,7 @@ Algorithmically, widely used Group Relative Policy Optimization (GRPO) suffers f
 DGPO first rectifies the implicit imbalance in GRPO via difficulty-balanced group advantage estimation (DGAE), and further prioritizes harder questions by difficulty-aware question-level weighting (DQW).
 
 <p align="center">
-  <img src="assests/DGPO.jpg" width="70%">
+  <img src="assets/DGPO.jpg" width="1000px">
 </p>
 
 ### Multi-Aspect Question Reformulation (MQR)
@@ -69,7 +69,7 @@ MQR reformulates questions across multiple aspects to increase difficulty while 
 The core instructions for these strategies are as follows:
 
 <p align="center">
-  <img src="assests/MQR.jpg" width="70%">
+  <img src="assets/MQR.jpg" width="1000px">
 </p>
 
 <!-- - **Background:** Add a story background that is not related to the core mathematical content of the given question, but seems to be related to the question. If the given question already has such a background, change it to a new, complexer background.
