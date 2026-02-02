@@ -8,17 +8,16 @@
   <a href="https://yanqidai.github.io/">Yanqi Dai</a><sup>1,2</sup>,
   Yuxiang Ji<sup>3</sup>,
   Xiao Zhang<sup>4</sup>,
-  Yong Wang<sup>2†</sup>,
-  Guanhua Chen<sup>3</sup>,
+  Yong Wang<sup>2†*</sup>,
   Xiangxiang Chu<sup>2</sup>,
-  Zhiwu Lu<sup>1</sup>
+  Zhiwu Lu<sup>1*</sup>
   <br>
   <sup>1</sup>Gaoling School of Artificial Intelligence, Renmin University of China &nbsp;&nbsp;
   <sup>2</sup>AMAP, Alibaba Group &nbsp;&nbsp;
   <sup>3</sup>Xiamen University &nbsp;&nbsp;
   <sup>4</sup>Dalian University of Technology
   <br>
-  <sup>†</sup>Project lead. &nbsp;&nbsp;&nbsp;
+  <sup>†</sup>Project lead; <sup>*</sup>Corresponding authors. &nbsp;&nbsp;&nbsp;
 </p>
 
 <div align="center"> 
