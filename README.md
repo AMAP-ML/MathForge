@@ -59,7 +59,7 @@ Algorithmically, widely used Group Relative Policy Optimization (GRPO) suffers f
 DGPO first rectifies the implicit imbalance in GRPO via difficulty-balanced group advantage estimation (DGAE), and further prioritizes harder questions by difficulty-aware question-level weighting (DQW).
 
 <p align="center">
-  <img src="assets/DGPO.jpg" width="800px">
+  <img src="assets/DGPO.jpg" width="500px">
 </p>
 
 ### Multi-Aspect Question Reformulation (MQR)
@@ -69,7 +69,7 @@ MQR reformulates questions across multiple aspects to increase difficulty while 
 The core instructions for these strategies are as follows:
 
 <p align="center">
-  <img src="assets/MQR.jpg" width="800px">
+  <img src="assets/MQR.jpg" width="500px">
 </p>
 
 <!-- - **Background:** Add a story background that is not related to the core mathematical content of the given question, but seems to be related to the question. If the given question already has such a background, change it to a new, complexer background.
