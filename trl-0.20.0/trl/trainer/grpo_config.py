@@ -577,7 +577,8 @@ class GRPOConfig(TrainingArguments):
             "all prompts are logged."
         },
     )
-    # DGPO temperature
+    
+    # Parameters that used for DGPO
     enable_dgpo: bool = field(
         default=False,
         metadata={"help": "Whether to use DGPO."},
@@ -590,43 +591,6 @@ class GRPOConfig(TrainingArguments):
         default=2.0,
         metadata={"help": "The temperature for DQW in DGPO."},
     )
-
-    # f1_normalization: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to normalize the advantages by the MAD function."},
-    # )
-    # completion_balancing: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to use completion balancing."},
-    # )
-    # global_balancing: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to use global balancing."},
-    # )
-    # zero_mask: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to mask the zero advantage samples in the token-level."},
-    # )
-    # zero_mask_sample: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to mask the zero advantage samples in the sample-level."},
-    # )
-    # difficulty_balancing: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to use difficulty balancing."},
-    # )
-    # difficulty_balancing_woincorrect: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to use difficulty balancing without incorrect samples."},
-    # )
-    # difficulty_balancing_temp: float = field(
-    #     default=1.0,
-    #     metadata={"help": "The temperature for difficulty balancing."},
-    # )
-    # gpg_enable: bool = field(
-    #     default=False,
-    #     metadata={"help": "Whether to use GPG."},
-    # )
 
     def __post_init__(self):
         self.bf16 = not (self.fp16) if self.bf16 is None else self.bf16
