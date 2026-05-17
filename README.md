@@ -159,11 +159,12 @@ We express our gratitude to these projects.
 If you find MathForge useful for your research and applications, please cite using this BibTeX:
 
 ```bibtex
-@article{dai2026harder,
-    title={Harder is better: Boosting mathematical reasoning via difficulty-aware grpo and multi-aspect question reformulation}, 
-    author={Dai, Yanqi and Ji, Yuxiang and Zhang, Xiao and Wang, Yong and Chu, Xiangxiang and Lu, Zhiwu},
-    journal={arXiv preprint arXiv:2601.20614},
-    year={2026}
+@inproceedings{dai2026harder,
+    title={Harder Is Better: Boosting Mathematical Reasoning via Difficulty-Aware GRPO and Multi-Aspect Question Reformulation},
+    author={Yanqi Dai and Yuxiang Ji and Xiao Zhang and Yong Wang and Xiangxiang Chu and Zhiwu Lu},
+    booktitle={The Fourteenth International Conference on Learning Representations},
+    year={2026},
+    url={https://openreview.net/forum?id=nfURupkdRJ}
 }
 ```
 
